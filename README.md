@@ -1,20 +1,23 @@
-# Multi-Wing Standard Specification v0.1
+# Multi-Wing Standard Specification
 
-A draft standard specification for distributed co-creation intelligence based on role-differentiated Wings, Kazene-style coordination, and trace-aware interoperability.  
-This repository defines the core model, coordination principles, interaction protocol, shared context, provenance hooks, and interoperability profiles for Multi-Wing systems.  
+An open draft standard for distributed intelligence based on role-specialized Wings, Kazene coordination, shared context, trace-aware interoperability, and scenario-based coordination models.  
+This repository defines the core architectural model, coordination principles, interaction protocol, shared context, trace lifecycle, interoperability profiles, and reference examples for Multi-Wing systems.  
 Multi-Wing aims to provide a standardizable upper abstraction for distributed intelligence across structure, protocol, and execution layers.
 
 ---
 
 ## Status
 
-**Status:** Draft v0.1  
-**Type:** Open specification draft  
-**Scope:** Conceptual standardization + interoperable reference model  
-**Canonical specification:** `spec/multi-wing-standard-specification-v0.1.md`
+**Repository status:** active draft specification  
+**Latest draft:** `spec/multi-wing-standard-specification-v0.2.md`  
+**Previous draft:** `spec/multi-wing-standard-specification-v0.1.md`
 
-This repository is the canonical home of the **Multi-Wing Standard Specification v0.1**.  
-It is intended as an open, evolving specification for distributed intelligence systems composed of role-specialized agents ("Wings"), shared coordination logic, and trace-aware interaction.
+Multi-Wing v0.2 should be read as the **current operational draft**, while v0.1 remains the **baseline structural draft**.
+
+In practical terms:
+
+- **v0.1** defines the architectural foundation
+- **v0.2** defines more of the coordination law
 
 ---
 
@@ -27,9 +30,9 @@ Current AI systems often converge toward one of two extremes:
 
 Multi-Wing proposes a third path:
 
-> **distributed intelligence with explicit role structure, coordination principles, provenance awareness, and interoperable execution**
+> **distributed intelligence with explicit role structure, coordination principles, trace-aware continuity, and interoperable execution**
 
-The goal is not merely to build another agent framework, but to define a **portable architectural standard** for systems where multiple specialized units collaborate, adapt, verify, and evolve together.
+The goal is not merely to build another agent framework, but to define a **portable architectural standard** for systems where multiple specialized units collaborate, adapt, verify, rebalance, and evolve together.
 
 ---
 
@@ -39,9 +42,10 @@ Multi-Wing standardizes the minimum interoperable model for:
 
 - **Wing types** and role specialization
 - **Kazene-style coordination principles**
+- **operational coordination semantics**
 - **interaction flows** between Wings
 - **shared context structures**
-- **trace and provenance hooks**
+- **trace and provenance lifecycle hooks**
 - **interoperability profiles**
 - **execution-layer compatibility** for distributed inference and real-time deployment
 
@@ -51,10 +55,29 @@ This specification is designed to bridge three layers:
    Defines what kinds of Wings exist, how they relate, and how distributed intelligence is shaped.
 
 2. **Protocol Layer**  
-   Defines how Wings communicate, coordinate, revise, and finalize outcomes.
+   Defines how Wings communicate, coordinate, revise, rebalance, escalate, and finalize outcomes.
 
 3. **Execution Layer**  
-   Defines how Multi-Wing systems can be mapped onto real runtime environments, including distributed inference, routing, and edge deployment.
+   Defines how Multi-Wing systems can be mapped onto real runtime environments, including distributed inference, routing, degraded operation, and edge deployment.
+
+---
+
+## What Changed in v0.2
+
+Compared with v0.1, v0.2 shifts Multi-Wing from a structural draft toward a more operational specification.
+
+Key additions include:
+
+- explicit **Kazene operational semantics**
+- defined **Wing composition rules**
+- a **Trace Lifecycle Model** across proposal, review, revision, finalization, and escalation
+- strengthened **Interoperability Profiles**, including v0.2-oriented extensions
+- **scenario-based examples** for end-to-end coordination flows
+
+In short:
+
+- **v0.1** described the architecture
+- **v0.2** describes more of the governing dynamics
 
 ---
 
@@ -68,8 +91,10 @@ Multi-Wing is built around the following design principles:
 - **adaptation over rigidity**
 - **distributed resilience over central fragility**
 - **interoperability over ecosystem lock-in**
+- **reviewability over silent authority**
+- **bounded reconfiguration over uncontrolled drift**
 
-At the conceptual level, Multi-Wing adopts a distributed intelligence view in which global intelligence emerges from local specialization, structured interaction, and dynamic balance.
+At the conceptual level, Multi-Wing adopts a distributed intelligence view in which global intelligence emerges from local specialization, structured interaction, shared context, and dynamic balance.
 
 ---
 
@@ -79,7 +104,7 @@ At the conceptual level, Multi-Wing adopts a distributed intelligence view in wh
 A **Wing** is a functional intelligence unit with a defined role, capability boundary, and coordination interface.
 
 ### Role
-A **Role** defines the operational function of a Wing, such as generation, verification, routing, memory, governance, or audit.
+A **Role** defines the operational function of a Wing, such as generation, verification, routing, memory, governance, or interface mediation.
 
 ### Capability
 A **Capability** is a declared competence a Wing can perform under defined constraints.
@@ -91,10 +116,10 @@ A **Task** is a unit of coordinated work that may involve one or more Wings.
 A **Shared Context** is the structured information space used for coordination, memory, references, and state continuity.
 
 ### Trace Reference
-A **Trace Reference** is a provenance-aware reference object linking outputs to sources, contributions, or prior transformations.
+A **Trace Reference** is a provenance-aware reference object linking outputs to sources, contributions, revisions, reviews, or prior transformations.
 
 ### Kazene
-**Kazene** refers to the coordination logic of dynamic balance, local interaction, emergence, and structured co-movement across Wings.
+**Kazene** refers to the coordination logic of dynamic balance, local interaction, emergence, structured reconfiguration, and trace-aware cooperation across Wings.
 
 ---
 
@@ -106,13 +131,13 @@ The Multi-Wing Standard Specification aims to:
 - provide an interoperable model for role-specialized agent systems
 - support trace-aware collaboration and accountable co-creation
 - enable compatibility across different runtimes, transports, and orchestration layers
-- establish a foundation for future governance, verification, and value-allocation extensions
+- establish a foundation for future governance, verification, federation, and value-allocation extensions
 
 ---
 
 ## Non-Goals
 
-Multi-Wing v0.1 does **not** attempt to fully standardize:
+Multi-Wing does **not** attempt to fully standardize:
 
 - model weights or training procedures
 - a universal semantic theory of agent cognition
@@ -120,8 +145,9 @@ Multi-Wing v0.1 does **not** attempt to fully standardize:
 - a single mandatory transport layer
 - a complete formal verification system
 - a single vendor-controlled implementation stack
+- a universal identity system
 
-This specification focuses on the **minimum common structure** required for interoperability and standardization.
+This specification focuses on the **minimum common structure** required for interoperability, coordination clarity, and extensibility.
 
 ---
 
@@ -135,7 +161,8 @@ multi-wing-standard/
 ├─ CONTRIBUTING.md
 ├─ CITATION.cff
 ├─ spec/
-│  └─ multi-wing-standard-specification-v0.1.md
+│  ├─ multi-wing-standard-specification-v0.1.md
+│  └─ multi-wing-standard-specification-v0.2.md
 ├─ docs/
 │  ├─ one-page-overview.md
 │  ├─ architecture-overview.md
@@ -172,10 +199,10 @@ multi-wing-standard/
 ### Key Areas
 
 - `spec/`  
-  Canonical specification text.
+  Canonical specification texts. v0.2 is the current operational draft; v0.1 remains available as the baseline structural draft.
 
 - `docs/`  
-  Supporting architectural, operational, and interoperability documents.
+  Supporting architectural, operational, compositional, trace, and interoperability documents.
 
 - `schemas/`  
   JSON Schemas for core structural objects.
@@ -195,32 +222,32 @@ If you are new to this repository, read in the following order:
 1. `docs/one-page-overview.md`  
    A concise introduction to the overall idea and design intent.
 
-2. `spec/multi-wing-standard-specification-v0.1.md`  
-   The canonical draft specification.
+2. `spec/multi-wing-standard-specification-v0.2.md`  
+   The current operational draft and recommended primary entry point.
 
 3. `docs/architecture-overview.md`  
    A higher-level explanation of the three-layer model.
 
 4. `docs/wing-type-system.md`  
-   Definitions of Wing categories and composition patterns.
+   Definitions of Wing categories and composition boundaries.
 
 5. `docs/kazene-coordination-principles.md`  
-   The coordination philosophy and normative interaction principles.
+   The conceptual coordination philosophy of Multi-Wing.
 
 6. `docs/kazene-operational-semantics.md`  
-   The operational state model, rebalance conditions, and failure semantics of Kazene.
+   The operational state model, rebalance conditions, escalation triggers, and failure semantics of Kazene.
 
 7. `docs/wing-composition-rules.md`  
-   Recommended, risky, and guarded combinations of Wing roles.
+   Recommended, risky, guarded, and prohibited composition patterns across Wings.
 
 8. `docs/trace-lifecycle-model.md`  
-   Trace obligations across proposal, review, revision, finalization, and escalation.
+   Trace obligations across proposal, review, revision, finalization, escalation, and retention.
 
 9. `docs/interoperability-profiles.md`  
    Profile-based compatibility guidance, including v0.2-oriented extensions.
 
 10. `docs/relationship-to-mcp-a2a.md`  
-    Notes on interoperability and architectural alignment with adjacent protocol ecosystems.
+    Notes on architectural alignment with adjacent protocol ecosystems.
 
 11. `examples/`  
     Atomic schema-aligned examples for individual structural elements.
@@ -228,11 +255,40 @@ If you are new to this repository, read in the following order:
 12. `examples/scenarios/`  
     Informative end-to-end coordination scenarios.
 
+For historical comparison or baseline reference, see:
+
+- `spec/multi-wing-standard-specification-v0.1.md`
+
 ---
 
-## Specification Scope for v0.1
+## Draft Positioning
 
-The first draft focuses on the following areas:
+The repository currently maintains two draft layers:
+
+### v0.1 — Baseline Structural Draft
+v0.1 establishes the initial architectural frame of Multi-Wing, including:
+
+- the three-layer model
+- the core Wing model
+- the initial type system
+- the first interoperability framing
+- the base trace-aware structure
+
+### v0.2 — Current Operational Draft
+v0.2 extends that foundation by making Multi-Wing more operationally explicit, including:
+
+- Kazene as coordination semantics rather than principle alone
+- role composition rules
+- lifecycle-bound trace obligations
+- stronger profile differentiation
+- scenario-oriented interpretation of coordination flows
+
+---
+
+## Specification Scope
+
+### v0.1 Focus
+The baseline draft focuses on:
 
 - Overview
 - Terminology
@@ -247,7 +303,14 @@ The first draft focuses on the following areas:
 - Security Considerations
 - Conformance
 
-This version is intentionally minimal enough to be implementable, while broad enough to support future extensions.
+### v0.2 Focus
+The operational draft extends the above with:
+
+- Kazene operational semantics
+- Wing composition rules
+- Trace lifecycle modeling
+- stronger interoperability profile guidance
+- scenario-oriented coordination interpretation
 
 ---
 
@@ -264,7 +327,7 @@ Illustrative Wing categories include:
   Check consistency, evidence, safety, and quality.
 
 - **Routing / Coordination Wings**  
-  Assign tasks, manage workflow transitions, and maintain structured flow.
+  Assign tasks, manage workflow transitions, rebalance paths, and maintain structured flow.
 
 - **Memory / Context Wings**  
   Preserve continuity, retrieve references, and maintain shared context.
@@ -272,18 +335,21 @@ Illustrative Wing categories include:
 - **Governance / Audit Wings**  
   Track provenance, policy boundaries, and accountability hooks.
 
+- **Interface Wings**  
+  Mediate between external systems and the Multi-Wing field.
+
 - **Composite Wings**  
   Combine multiple functions under controlled composition rules.
 
-The formal type system is defined in `docs/wing-type-system.md` and the canonical specification.
+The formal type system is defined in `docs/wing-type-system.md` and the canonical specification drafts.
 
 ---
 
-## Kazene Coordination Principles
+## Kazene Coordination
 
 Kazene is the coordination kernel of Multi-Wing.
 
-It refers to a distributed mode of collaboration characterized by:
+At the conceptual level, it refers to a distributed mode of collaboration characterized by:
 
 - local interaction
 - self-organization
@@ -293,7 +359,17 @@ It refers to a distributed mode of collaboration characterized by:
 - adaptation and reconfiguration
 - containment of failure without total collapse
 
-In practical terms, Kazene describes how Wings collaborate without requiring a single, absolute controller.
+At the operational level, Kazene is further clarified through:
+
+- coordination states
+- valid transition patterns
+- rebalance conditions
+- escalation triggers
+- bounded failure propagation
+- degraded-mode semantics
+- trace-preserving transformation
+
+This is what allows Multi-Wing to move from a descriptive model toward an operational one.
 
 ---
 
@@ -311,7 +387,8 @@ Multi-Wing systems are expected to support a structured interaction lifecycle su
 8. **Finalization**
 9. **Escalation** (when necessary)
 
-The purpose of this lifecycle is to make multi-agent cooperation observable, testable, and portable across implementations.
+In v0.2-oriented interpretation, this lifecycle is no longer merely a sequence of labels.  
+It is treated as an observable coordination law with role-bound responsibilities, path changes, and trace consequences.
 
 ---
 
@@ -328,6 +405,8 @@ Multi-Wing therefore includes a shared context model for:
 - blackboard-style coordination
 - knowledge graph references
 - freshness and conflict rules
+- bounded access control
+- context mutation visibility
 
 This allows Wings to cooperate through structured memory rather than stateless exchange alone.
 
@@ -341,12 +420,15 @@ Trace integration supports:
 
 - provenance-aware outputs
 - contribution references
+- review-chain continuity
+- revision-chain continuity
 - auditable chains of transformation
-- signed event records
-- future dispute-resolution hooks
+- signed event hooks
+- dispute-resolution hooks
 - future value-allocation extensions
 
-Multi-Wing v0.1 does not require a full economic protocol, but it provides structural hooks for one.
+In v0.2-oriented interpretation, trace is not just attached metadata.  
+It is treated as part of the lifecycle law of coordination.
 
 ---
 
@@ -366,15 +448,16 @@ In practice, this means Multi-Wing can be used as:
 
 - a conceptual coordination model
 - a portable protocol layer
-- a normalization layer between different orchestration ecosystems
+- a normalization layer between orchestration ecosystems
+- a role-structured architecture for trace-aware distributed intelligence
 
-See `docs/relationship-to-mcp-a2a.md` for compatibility notes.
+See `docs/relationship-to-mcp-a2a.md` and `docs/interoperability-profiles.md` for more detail.
 
 ---
 
 ## Conformance
 
-Multi-Wing v0.1 is intended to support conformance testing.
+Multi-Wing is intended to support conformance testing.
 
 A conforming implementation should be able to demonstrate:
 
@@ -385,13 +468,15 @@ A conforming implementation should be able to demonstrate:
 - trace-compatible message or output structures
 - profile declaration and version identification
 
-Future versions may define stricter conformance levels such as:
+Later drafts may define stricter conformance surfaces such as:
 
 - **Minimal Profile**
 - **Cooperative Profile**
 - **Auditable Profile**
 - **Edge / Real-Time Profile**
 - **Enterprise Profile**
+- **Signed-Trace Profile**
+- **Federated Profile**
 
 ---
 
@@ -406,8 +491,9 @@ Multi-Wing is relevant to systems such as:
 - governance-aware AI collaboration environments
 - distributed expert networks
 - auditable knowledge work systems
+- federated specialist coordination systems
 
-The repository includes two kinds of examples:
+The repository includes two kinds of examples.
 
 ### Atomic Examples
 Located in `examples/`, these provide schema-aligned sample objects for:
@@ -457,7 +543,7 @@ These schemas are intended to support:
 
 ## Schema Usage
 
-You can validate sample files locally with standard JSON Schema tooling.
+You can validate atomic sample files locally with standard JSON Schema tooling.
 
 Example:
 
@@ -491,17 +577,18 @@ Repository-level validation may also be automated through `.github/workflows/val
 - provide compatibility notes with existing protocol ecosystems
 
 ### v0.2
-- strengthen profile definitions
-- expand trace and provenance objects
-- clarify extension mechanisms
-- refine conformance language
-- add more executable examples
+- strengthen operational semantics
+- define composition rules more explicitly
+- expand trace lifecycle behavior
+- clarify interoperability profile boundaries
+- provide richer scenario-based examples
 
 ### v0.3+
 - formalize registry structures
 - introduce broader governance patterns
-- strengthen real-time / edge deployment guidance
+- strengthen real-time and federated deployment guidance
 - define richer testing and reference workflow suites
+- refine stronger conformance language
 
 ---
 
@@ -613,11 +700,17 @@ This helps keep discussion precise and makes it easier to review changes at the 
 
 ## Versioning Policy
 
-This repository uses draft specification versioning.
+This repository maintains multiple draft versions of the Multi-Wing specification.
 
-- **v0.x** indicates early-stage, evolving drafts
-- backward compatibility may change between minor drafts
-- major stabilization is expected only after broader implementation and review
+- `v0.1.0` is the baseline structural draft
+- `v0.2.0` is the current operational draft
+- future drafts may refine conformance, trace depth, profile structure, and reference implementation guidance
+
+Unless otherwise stated:
+
+- the **latest draft** is the recommended reading target
+- earlier drafts remain available for comparison and lineage tracking
+- backward compatibility is not guaranteed before 1.0
 
 The canonical version identifier should always appear in:
 
@@ -668,10 +761,12 @@ Preferred citation metadata should include:
 
 Multi-Wing is not merely a framework for connecting agents.
 
-It is an attempt to define a **standardizable architecture for distributed intelligence** in which specialization, coordination, traceability, and resilience can coexist.
+It is an attempt to define a **standardizable architecture for distributed intelligence** in which specialization, coordination, traceability, bounded adaptation, and resilience can coexist.
 
 In that sense, Multi-Wing is both a technical specification and a proposal for how co-creation systems may remain open, interoperable, and structurally accountable as they scale.
 
 ## Keywords
 
 distributed intelligence, multi-agent systems, co-creation, interoperability, coordination, provenance, trace-aware systems, distributed AI, execution-layer compatibility, standard specification
+
+
