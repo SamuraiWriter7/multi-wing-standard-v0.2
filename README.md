@@ -70,8 +70,14 @@ Key additions include:
 
 - explicit **Kazene operational semantics**
 - defined **Wing composition rules**
-- a **Trace Lifecycle Model** across proposal, review, revision, finalization, and escalation
-- strengthened **Interoperability Profiles**, including v0.2-oriented extensions
+- a **Trace Lifecycle Model** across source introduction, proposal, assignment, execution, review, revision, rebalance, finalization, escalation, and archive / retention
+- strengthened **Interoperability Profiles**, including `signed-trace` and `federated`
+- clearer treatment of:
+  - degraded operation
+  - failure containment
+  - rebalance behavior
+  - authority trace
+  - review-chain and revision-chain continuity
 - **scenario-based examples** for end-to-end coordination flows
 
 In short:
@@ -241,10 +247,10 @@ If you are new to this repository, read in the following order:
    Recommended, risky, guarded, and prohibited composition patterns across Wings.
 
 8. `docs/trace-lifecycle-model.md`  
-   Trace obligations across proposal, review, revision, finalization, escalation, and retention.
+   Trace obligations across source introduction, proposal, assignment, execution, review, revision, rebalance, finalization, escalation, and archive / retention.
 
 9. `docs/interoperability-profiles.md`  
-   Profile-based compatibility guidance, including v0.2-oriented extensions.
+   Profile-based compatibility guidance, including v0.2-oriented extensions such as `signed-trace` and `federated`.
 
 10. `docs/relationship-to-mcp-a2a.md`  
     Notes on architectural alignment with adjacent protocol ecosystems.
@@ -278,7 +284,9 @@ v0.1 establishes the initial architectural frame of Multi-Wing, including:
 v0.2 extends that foundation by making Multi-Wing more operationally explicit, including:
 
 - Kazene as coordination semantics rather than principle alone
-- role composition rules
+- explicit coordination states and valid state transitions
+- rebalance, escalation, degraded-mode, and failure-containment semantics
+- Wing composition rules
 - lifecycle-bound trace obligations
 - stronger profile differentiation
 - scenario-oriented interpretation of coordination flows
@@ -310,6 +318,12 @@ The operational draft extends the above with:
 - Wing composition rules
 - Trace lifecycle modeling
 - stronger interoperability profile guidance
+- explicit treatment of:
+  - rebalance
+  - escalation
+  - degraded operation
+  - authority trace
+  - review-chain and revision-chain continuity
 - scenario-oriented coordination interpretation
 
 ---
@@ -768,5 +782,4 @@ In that sense, Multi-Wing is both a technical specification and a proposal for h
 ## Keywords
 
 distributed intelligence, multi-agent systems, co-creation, interoperability, coordination, provenance, trace-aware systems, distributed AI, execution-layer compatibility, standard specification
-
 
