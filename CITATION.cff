@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+title: "Multi-Wing Standard Specification"
+message: "If you use this repository in research, articles, or derivative specifications, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: "Alpha"
+    given-names: "Shidenkai"
+version: "v0.2.0"
+date-released: "2026-05-07"
+repository-code: "https://github.com/SamuraiWriter7/multi-wing-standard"
+url: "https://github.com/SamuraiWriter7/multi-wing-standard"
+abstract: >
+  Multi-Wing Standard Specification is an open draft specification
+  for distributed co-creation intelligence based on role-specialized Wings,
+  Kazene coordination, shared context, trace-aware interoperability,
+  operational coordination semantics, and scenario-based examples.
+keywords:
+  - distributed intelligence
+  - multi-agent systems
+  - co-creation
+  - interoperability
+  - coordination
+  - provenance
+  - trace-aware systems
+  - distributed AI
+  - standard specification
+  - kazene
+  - wing type system
+license: "Apache-2.0"
+
+preferred-citation:
+  type: report
+  authors:
+    - family-names: "Alpha"
+      given-names: "Shidenkai"
+  title: "Multi-Wing Standard Specification v0.2"
+  version: "v0.2.0"
+  date-released: "2026-05-07"
+  url: "https://github.com/SamuraiWriter7/multi-wing-standard"
+  abstract: >
+    Multi-Wing Standard Specification v0.2 is the current operational draft
+    of an open standard for distributed intelligence, extending the v0.1
+    structural foundation with Kazene operational semantics, Wing composition
+    rules, trace lifecycle modeling, strengthened interoperability profiles,
+    and scenario-based coordination examples.
