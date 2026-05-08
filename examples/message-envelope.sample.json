@@ -1,0 +1,43 @@
+{
+  "version": "v0.2.0",
+  "message_id": "msg-001",
+  "message_type": "propose",
+  "timestamp": "2026-05-08T13:20:00Z",
+  "sender_wing_id": "wing-gen-01",
+  "receiver_wing_id": "wing-ver-01",
+  "task_id": "task-001",
+  "session_id": "session-001",
+  "correlation_id": "corr-001",
+  "context_ref": {
+    "context_id": "ctx-001",
+    "revision":": "ctx-001",
+    "revision 1
+  },
+  "trace_refs": [
+    {
+      "trace_id": "trace-source-001",
+      "relation_type": "source"
+    },
+    {
+      "trace_id": "trace-assignment-001",
+      "relation_type": "assignment"
+    }
+  ],
+  "review_state": "not-reviewed",
+  "priority": "normal",
+  "profile_id": "cooperative",
+  "payload": {
+    "artifact_ref": "artifact-001",
+    "proposal_type": "draft-synthesis",
+    "summary": "Initial candidate synthesis generated from retrieved source material.",
+    "inputs": [
+      "source-doc-001",
+      "source-doc-002"
+    ]
+  },
+  "signature": {
+    "algorithm": "Ed25519",
+    "key_id": "key-wing-gen-01",
+    "signature_value": "base64-example-signature-value"
+  }
+}
