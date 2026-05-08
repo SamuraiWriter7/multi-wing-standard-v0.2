@@ -1,0 +1,77 @@
+{
+  "version": "v0.2.0",
+  "context_id": "ctx-001",
+  "task_id": "task-001",
+  "coordination_state": "in-review",
+  "artifacts": [
+    {
+      "artifact_id": "artifact-001",
+      "artifact_type": "draft",
+      "uri": "urn:artifact:artifact-001"
+    },
+    {
+      "artifact_id": "artifact-002",
+      "artifact_type": "review-note",
+      "uri": "urn:artifact:artifact-002"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "constraint-001",
+      "label": "review-required",
+      "value": true
+    },
+    {
+      "id": "constraint-002",
+      "label": "domain",
+      "value": "distributed-intelligence"
+    }
+  ],
+  "policies": [
+    {
+      "id": "policy-001",
+      "label": "trace-preservation",
+      "value": "mandatory"
+    },
+    {
+      "id": "policy-002",
+      "label": "finalization-rule",
+      "value": "verification-before-finalize"
+    }
+  ],
+  "trace_refs": [
+    {
+      "trace_id": "trace-source-001",
+      "relation_type": "source"
+    },
+    {
+      "trace_id": "trace-assignment-001",
+      "relation_type": "assignment"
+    },
+    {
+      "trace_id": "trace-review-001",
+      "relation_type": "review"
+    }
+  ],
+  "freshness_state": "fresh",
+  "conflict_state": "none",
+  "access_policy": {
+    "mode": "review-gated",
+    "allowed_wing_ids": [
+      "wing-gen-01",
+      "wing-ver-01",
+      "wing-gov-01",
+      "wing-route-01"
+    ]
+  },
+  "update_metadata": {
+    "last_updated": "2026-05-08T13:25:00Z",
+    "updated_by": "wing-ver-01",
+    "revision": 2
+  },
+  "metadata": {
+    "label": "Primary review context",
+    "environment": "demo",
+    "notes": "Context reflects a candidate artifact currently under verification review."
+  }
+}
