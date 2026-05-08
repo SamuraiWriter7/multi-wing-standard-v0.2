@@ -1,0 +1,49 @@
+{
+  "version": "v0.2.0",
+  "wing_id": "wing-gen-01",
+  "type": "generation",
+  "description": "Generation Wing for candidate draft synthesis and revision-aware content production.",
+  "capabilities": [
+    "draft",
+    "synthesize",
+    "propose",
+    "revise"
+  ],
+  "traits": [
+    "asynchronous",
+    "stateful",
+    "trace-emitting"
+  ],
+  "profiles": [
+    "cooperative",
+    "auditable"
+  ],
+  "context_access": {
+    "mode": "read-write",
+    "scopes": [
+      "task-state",
+      "artifact-drafts",
+      "trace-references",
+      "review-feedback"
+    ]
+  },
+  "trace_responsibilities": [
+    "emit",
+    "attach",
+    "preserve"
+  ],
+  "constraints": [
+    "Outputs are provisional until reviewed.",
+    "Must preserve relevant upstream trace references when source material is available.",
+    "Must support revision when review requests are present."
+  ],
+  "review_limitations": [
+    "Cannot self-finalize non-trivial outputs without an external review-capable path."
+  ],
+  "authority_concentration_declared": false,
+  "metadata": {
+    "label": "Primary Draft Generation Wing",
+    "owner": "multi-wing-demo",
+    "notes": "Used in cooperative and auditable scenario examples."
+  }
+}
